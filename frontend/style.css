@@ -5,6 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
 .container {
@@ -12,11 +13,13 @@ body {
   padding: 30px;
   width: 320px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   text-align: center;
+  margin-top: 0;
+  color: #333;
 }
 
 input {
@@ -24,6 +27,9 @@ input {
   padding: 10px;
   margin: 8px 0;
   box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 button {
@@ -31,9 +37,31 @@ button {
   padding: 10px;
   margin-top: 8px;
   cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.btn-register {
+  background-color: #28a745;
+}
+
+.btn-register:hover {
+  background-color: #218838;
 }
 
 #message {
   margin-top: 15px;
   text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
 }
