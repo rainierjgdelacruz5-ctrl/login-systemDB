@@ -1,49 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login System - Secure Access</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="login-container">
-        <div class="login-header">
-            <h2>Welcome Back</h2>
-            <p>Please enter your details to sign in</p>
-        </div>
-        
-        <form id="loginForm" onsubmit="event.preventDefault();">
-            <div class="input-group">
-                <!-- Added id="name" so the register function can read it if needed -->
-                <label for="name" style="display:none;">Name (For Register)</label>
-                <input type="text" id="name" placeholder="Enter your name (Register only)" style="display:none; margin-bottom: 15px;">
-                
-                <label for="email">Email or Username</label>
-                <input type="text" id="email" placeholder="Enter your email" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="••••••••" required>
-            </div>
-            
-            <!-- Message area for success or error feedback -->
-            <p id="message" style="color: #ff4d4d; font-size: 14px; margin: 10px 0; text-align: center;"></p>
-            
-            <!-- Sign In Button -->
-            <button type="button" class="btn-submit" onclick="login()">Sign In</button>
-            
-            <!-- Register Button -->
-            <button type="button" class="btn-submit" onclick="register()" style="margin-top: 10px; background-color: #28a745;">Register</button>
-        </form>
-        
-        <div class="login-footer">
-            <p>Don't have an account? <a href="#" onclick="document.getElementById('name').style.display='block';">Show Register Name Field</a></p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <button onclick="login()">Login</button>
+
+      <p>Don't have an account?</p>
+
+      <input type="text" id="name" placeholder="Name" />
+      <button onclick="register()">Register</button>
+
+      <p id="message"></p>
     </div>
 
-    <!-- Link your app.js script -->
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
