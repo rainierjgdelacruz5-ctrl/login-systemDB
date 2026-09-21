@@ -10,15 +10,22 @@
     <div class="container">
       <h2>Login</h2>
 
-      <input type="email" id="email" placeholder="Email" />
-      <input type="password" id="password" placeholder="Password" />
+      <!-- Login Section -->
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+      </div>
 
-      <button onclick="login()">Login</button>
+      <hr style="border: 0; border-top: 1px solid #ddd; margin: 20px 0;">
 
-      <p>Don't have an account?</p>
-
-      <input type="text" id="name" placeholder="Name" />
-      <button onclick="register()">Register</button>
+      <!-- Register Section -->
+      <div class="form-group">
+        <p style="text-align: center; font-weight: bold; margin-bottom: 10px;">Don't have an account?</p>
+        <input type="text" id="name" placeholder="Name or Username" />
+        <input type="password" id="regPassword" placeholder="Password" />
+        <button onclick="register()" class="btn-register">Register</button>
+      </div>
 
       <p id="message"></p>
     </div>
