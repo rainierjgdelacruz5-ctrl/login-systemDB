@@ -13,29 +13,37 @@
             <p>Please enter your details to sign in</p>
         </div>
         
-        <form id="loginForm" onsubmit="event.preventDefault(); login();">
-    <div class="input-group">
-        <label for="email">Email or Username</label>
-        <input type="text" id="email" placeholder="Enter your email" required>
-    </div>
-    
-    <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="••••••••" required>
-    </div>
-    
-    <!-- Add this line so error/success messages can show up -->
-    <p id="message" style="color: red; font-size: 14px; margin-top: 10px;"></p>
-    
-    <button type="submit" class="btn-submit">Sign In</button>
-        </form>
+        <form id="loginForm" onsubmit="event.preventDefault();">
+            <div class="input-group">
+                <!-- Added id="name" so the register function can read it if needed -->
+                <label for="name" style="display:none;">Name (For Register)</label>
+                <input type="text" id="name" placeholder="Enter your name (Register only)" style="display:none; margin-bottom: 15px;">
+                
+                <label for="email">Email or Username</label>
+                <input type="text" id="email" placeholder="Enter your email" required>
+            </div>
             
-            <button type="submit" class="btn-submit">Sign In</button>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            
+            <!-- Message area for success or error feedback -->
+            <p id="message" style="color: #ff4d4d; font-size: 14px; margin: 10px 0; text-align: center;"></p>
+            
+            <!-- Sign In Button -->
+            <button type="button" class="btn-submit" onclick="login()">Sign In</button>
+            
+            <!-- Register Button -->
+            <button type="button" class="btn-submit" onclick="register()" style="margin-top: 10px; background-color: #28a745;">Register</button>
         </form>
         
         <div class="login-footer">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <p>Don't have an account? <a href="#" onclick="document.getElementById('name').style.display='block';">Show Register Name Field</a></p>
         </div>
     </div>
+
+    <!-- Link your app.js script -->
+    <script src="app.js"></script>
 </body>
 </html>
