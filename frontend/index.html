@@ -13,16 +13,22 @@
             <p>Please enter your details to sign in</p>
         </div>
         
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="email">Email or Username</label>
-                <input type="text" id="email" placeholder="Enter your email" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="••••••••" required>
-            </div>
+        <form id="loginForm" onsubmit="event.preventDefault(); login();">
+    <div class="input-group">
+        <label for="email">Email or Username</label>
+        <input type="text" id="email" placeholder="Enter your email" required>
+    </div>
+    
+    <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+    </div>
+    
+    <!-- Add this line so error/success messages can show up -->
+    <p id="message" style="color: red; font-size: 14px; margin-top: 10px;"></p>
+    
+    <button type="submit" class="btn-submit">Sign In</button>
+        </form>
             
             <button type="submit" class="btn-submit">Sign In</button>
         </form>
