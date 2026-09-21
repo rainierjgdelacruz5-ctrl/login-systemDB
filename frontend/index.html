@@ -8,24 +8,26 @@
   </head>
   <body>
     <div class="container">
-      <h2>Login</h2>
+      <h2>Account Access</h2>
 
-      <!-- Login Section -->
-      <div class="form-group">
-        <input type="email" id="email" placeholder="Email" />
-        <input type="password" id="password" placeholder="Password" />
-        <button onclick="login()">Login</button>
+      <!-- Combined inputs used for both Login & Register based on your app.js -->
+      <div class="input-group">
+        <label for="name">Name (for Register)</label>
+        <input type="text" id="name" placeholder="Enter your name" />
       </div>
 
-      <hr style="border: 0; border-top: 1px solid #ddd; margin: 20px 0;">
-
-      <!-- Register Section -->
-      <div class="form-group">
-        <p style="text-align: center; font-weight: bold; margin-bottom: 10px;">Don't have an account?</p>
-        <input type="text" id="name" placeholder="Name or Username" />
-        <input type="password" id="regPassword" placeholder="Password" />
-        <button onclick="register()" class="btn-register">Register</button>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
       </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" />
+      </div>
+
+      <button onclick="login()">Login</button>
+      <button onclick="register()" class="btn-register">Register</button>
 
       <p id="message"></p>
     </div>
